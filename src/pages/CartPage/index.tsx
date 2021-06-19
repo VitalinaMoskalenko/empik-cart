@@ -41,6 +41,10 @@ const CartPage = () => {
     setTotalPrice(Number(Number(result).toFixed(2)));
   }, [cartItems]);
 
+  useEffect(() => {
+    setTotalPrice(Number(totalPrice.toFixed(2)));
+  }, [totalPrice]);
+
   return (
     <div>
       <ul>
