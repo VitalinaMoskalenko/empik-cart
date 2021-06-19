@@ -5,6 +5,7 @@ export const theme = {
     white: ColorType.white,
     black: ColorType.black,
     grey: ColorType.grey,
+    red: ColorType.red,
     orange: ColorType.orange,
   },
   fonts: {

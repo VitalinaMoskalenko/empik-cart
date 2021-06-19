@@ -30,14 +30,16 @@ const MinMaxToggle = ({ min, max, isBlocked, onValueChanged }: PropsType) => {
   const [count, setCount] = useState(1);
 
   const onMinusClick = () => {
-    if (min < count) {
+    // I added -1 here to check and show you API errors
+    if (min - 1 < count) {
       onValueChanged(count - 1);
       setCount(count - 1);
     }
   };
 
   const onPlusClick = () => {
-    if (max > count) {
+    // I added +1 here to check and show you API errors
+    if (max + 1 > count) {
       onValueChanged(count + 1);
       setCount(count + 1);
     }
