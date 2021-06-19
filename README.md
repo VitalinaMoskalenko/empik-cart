@@ -1,19 +1,3 @@
-# Zadania
-
-Zadania mogą być wykonane niezależnie, możesz użyć dowolnej biblioteki zewnętrznej. W miarę możliwości użyj Hook API.
-
-* Rozszerz komponent App, aby lista produktów była pobierana z końcówki **/api/cart**, wyświetl nazwę produktu oraz jego cenę. Cena powinna być poprawnie sformatowana.
-* Dodaj nowy komponent, który będzie wyświetlał liczbę sztuk produktu dodanych do koszyka. 
-
-    * Komponent powinien wyświetlać dwa przyciski: plus i minus oraz tekst: "Obecnie masz X sztuk produktu".
-    * Komponent będzie mógł przyjmować opcjonalne propsy min, max i isBlocked. Min i max mają określać minimalną i maksymalną liczbę sztuk.
-    * Kliknięcia w plus i minus mają odpowiednio zwiększać i zmniejszać o 1 liczbę sztuk wyświetlaną w tekście w przedziale min i max.
-    * Gdy wartość propsa isBlocked będzie true, przyciski zmiany ilości mają być zablokowane.
-
-* Do powyższego komponentu dodaj sprawdzanie, czy wprowadzona liczba sztuk jest poprawna, w tym celu odpytaj końcówkę **/api/product/check**. W przypadku błędu liczba sztuk produktu powinna zostać wyzerowana do wartości minimalnej. Jeżeli to możliwe, dodaj funkcję debounce, aby zminimalizować liczbę zapytań.
-
-* Do komponentu App dodaj zliczanie całkowitej sumy zamówienia. Suma powinna być wyświetlana pod listą produktów.
-
 # Wymagania
 
 Node wersja 12.x lub wyższa
@@ -102,4 +86,7 @@ Przykład:
     "errorType": "NOT_FOUND"
 }
 ```
+
+### Obsługa błędów
+Komponent MinMaxToggle ma zmieniony count by obsługiwał nieobsługiwane wartości w celu przedstawienia działania obsługi błędów. W rzeczywistej aplikacji naleażło by wyeliminować dodawanie/odejmowanie liczby 1 i komponent bazował by na wartościach min/max. Obsługa błędów stanowiła by dodatkowe zabezpieczenie przed niepożądanym atakiem.
 
