@@ -1,7 +1,3 @@
-# Wymagania
-
-Node wersja 12.x lub wyższa
-
 # Uruchomienie
 
 Instalacja zależności:
@@ -13,6 +9,8 @@ Uruchomienie projektu:
 
 ``` yarn start ```
 
+# Obsługa błędów
+Komponent MinMaxToggle ma zmieniony count by obsługiwał nieobsługiwane wartości w celu przedstawienia działania obsługi błędów. W rzeczywistej aplikacji naleażło by wyeliminować dodawanie/odejmowanie liczby 1 i komponent bazował by na wartościach min/max. Obsługa błędów stanowiła by dodatkowe zabezpieczenie przed niepożądanym atakiem.
 # API
 
 W ramach projektu dostępne jest rest API:
@@ -86,7 +84,4 @@ Przykład:
     "errorType": "NOT_FOUND"
 }
 ```
-
-### Obsługa błędów
-Komponent MinMaxToggle ma zmieniony count by obsługiwał nieobsługiwane wartości w celu przedstawienia działania obsługi błędów. W rzeczywistej aplikacji naleażło by wyeliminować dodawanie/odejmowanie liczby 1 i komponent bazował by na wartościach min/max. Obsługa błędów stanowiła by dodatkowe zabezpieczenie przed niepożądanym atakiem.
 
