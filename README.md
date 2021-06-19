@@ -9,6 +9,10 @@ Uruchomienie projektu:
 
 ``` yarn start ```
 
+Uruchomienie testów:
+
+``` yarn test```
+
 # Obsługa błędów
 Komponent MinMaxToggle ma zmieniony count by obsługiwał nieobsługiwane wartości w celu przedstawienia działania obsługi błędów. W rzeczywistej aplikacji naleażło by wyeliminować dodawanie/odejmowanie liczby 1 i komponent bazował by na wartościach min/max. Obsługa błędów stanowiła by dodatkowe zabezpieczenie przed niepożądanym atakiem.
 # API

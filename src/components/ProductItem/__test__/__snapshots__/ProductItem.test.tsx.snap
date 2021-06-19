@@ -1,0 +1,23 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders ProductItem correctly 1`] = `
+<div
+  className="sc-iCoGMd bDrLOR"
+>
+  <h1
+    className="sc-dlnjwi czuNcg"
+  >
+    Title
+  </h1>
+  <p
+    className="sc-jSFjdj sc-fujyAs bQuzKy lpvfqg"
+  >
+    Components.ProductItem.price
+    <span
+      className="sc-pNWdM fxxTmU"
+    >
+      Components.ProductItem.currency
+    </span>
+  </p>
+</div>
+`;

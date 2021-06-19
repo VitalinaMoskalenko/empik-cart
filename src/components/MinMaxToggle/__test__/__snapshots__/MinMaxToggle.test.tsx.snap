@@ -1,0 +1,33 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders MinMaxToggle correctly 1`] = `
+<div
+  className="sc-dlnjwi kcZDqU"
+>
+  <button
+    className="sc-hKFxyN fyweba"
+    onClick={[Function]}
+  >
+    <p
+      className="sc-gtsrHT ckjQab"
+    >
+      -
+    </p>
+  </button>
+  <p
+    className="sc-gtsrHT sc-eCApnc ckjQab dWxdxR"
+  >
+    1
+  </p>
+  <button
+    className="sc-hKFxyN fyweba"
+    onClick={[Function]}
+  >
+    <p
+      className="sc-gtsrHT ckjQab"
+    >
+      +
+    </p>
+  </button>
+</div>
+`;
