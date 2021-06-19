@@ -13,6 +13,7 @@ type PropsType = {
   max: number;
   isBlocked?: boolean;
   itemId: string;
+  setTotalPrice: React.Dispatch<React.SetStateAction<number>>;
 };
 
 const Container = styled.li`
@@ -42,14 +43,28 @@ type MutationProps = {
 
 const baseTranslation = "Pages.CartPage.Errors.";
 
-const CartItem = ({ title, price, min, max, isBlocked, itemId }: PropsType) => {
+const CartItem = ({
+  title,
+  price,
+  min,
+  max,
+  isBlocked,
+  itemId,
+  setTotalPrice,
+}: PropsType) => {
   const [errorMessage, setErrorMessage] = useState<string | null>(null);
 
   const { t } = useTranslation();
 
-  const onValueChanged = (value: number) => {
+  const onValueChanged = (value: number, previousValue: number) => {
+    const oldPrice = previousValue * Number(price);
+    const newPrice = value * Number(price);
+
+    setTotalPrice((previousPrice) => {
+      return previousPrice - oldPrice + newPrice;
+    });
+
     checkProduct({ pid: itemId, quantity: value });
-    console.log((Number(price) * value).toFixed(2), itemId);
   };
 
   const { mutate: checkProduct } = useMutation(

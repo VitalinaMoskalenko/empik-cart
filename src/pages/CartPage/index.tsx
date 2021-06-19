@@ -30,6 +30,17 @@ const CartPage = () => {
     },
   });
 
+  useEffect(() => {
+    const result = cartItems?.reduce(
+      (accumulator: number, currentValue: CartResponseType) => {
+        return accumulator + Number(currentValue.price);
+      },
+      0
+    );
+
+    setTotalPrice(Number(Number(result).toFixed(2)));
+  }, [cartItems]);
+
   return (
     <div>
       <ul>
@@ -42,6 +53,7 @@ const CartPage = () => {
             min={item.min}
             max={item.max}
             isBlocked={item.isBlocked}
+            setTotalPrice={setTotalPrice}
           />
         ))}
       </ul>

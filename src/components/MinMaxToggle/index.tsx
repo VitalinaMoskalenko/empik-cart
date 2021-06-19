@@ -6,7 +6,7 @@ type PropsType = {
   min: number;
   max: number;
   isBlocked?: boolean;
-  onValueChanged: (value: number) => void;
+  onValueChanged: (value: number, previousValue: number) => void;
 };
 
 const Container = styled.div`
@@ -32,7 +32,7 @@ const MinMaxToggle = ({ min, max, isBlocked, onValueChanged }: PropsType) => {
   const onMinusClick = () => {
     // I added -1 here to check and show you API errors
     if (min - 1 < count) {
-      onValueChanged(count - 1);
+      onValueChanged(count - 1, count);
       setCount(count - 1);
     }
   };
@@ -40,7 +40,7 @@ const MinMaxToggle = ({ min, max, isBlocked, onValueChanged }: PropsType) => {
   const onPlusClick = () => {
     // I added +1 here to check and show you API errors
     if (max + 1 > count) {
-      onValueChanged(count + 1);
+      onValueChanged(count + 1, count);
       setCount(count + 1);
     }
   };
